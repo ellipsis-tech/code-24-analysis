@@ -32,11 +32,11 @@ When we write the function calls:
 
 - $T(0)$ is the base case, it has 1 call
 - $T(1)$ makes two calls to $T(0)$, it has a total of 3 function calls (including the call to itself). (increased by 2 from $T(0)$)
-- $T(2) = T(1) + T(1)$, it has a total of 3 + 3 + 1 = 7 calls (increased by 4 from $T(1)$)
-- $T(3) = T(2) + T(1)$, it has a total of 7 + 3 + 1 = 11 calls (increased by 4 from $T(2)$)
-- $T(4) = T(3) + T(2)$, it has a total of 11 + 7 + 1 = 19 calls (increased by 8 from $T(3)$)
-- $T(5) = T(4) + T(2)$, it has a total of 19 + 7 + 1 = 27 calls (increased by 8 from $T(4)$)
-- $T(6) = T(5) + T(3)$, it has a total of 27 + 11 + 1 = 39 calls (increased by 12 from $T(5)$)
+- $T(2) = T(1) + T(1)$, it has a total of 3 + 3 + 1 = 7 calls (increased by 4 from  $T(1)$ )
+- $T(3) = T(2) + T(1)$, it has a total of 7 + 3 + 1 = 11 calls (increased by 4 from $T(2)$ )
+- $T(4) = T(3) + T(2)$, it has a total of 11 + 7 + 1 = 19 calls (increased by 8 from $T(3)$ )
+- $T(5) = T(4) + T(2)$, it has a total of 19 + 7 + 1 = 27 calls (increased by 8 from $T(4)$ )
+- $T(6) = T(5) + T(3)$, it has a total of 27 + 11 + 1 = 39 calls (increased by 12 from $T(5)$ )
 
 and so on.
 
@@ -79,5 +79,9 @@ The complexity of `f5` is $O(n^2)$.
 ### Q4: In this case for f6, what could f(n) represent such that it is a good measure of the time complexity?
 
 Option D and E only. It is the only line representative of the time complexity. Time Complexity of the function is $O(NK)$, it is the inner for loop that runs $NK$ times.
+
+Full marks were awarded if:
+- You selected option E only
+- You selected option D and E only
 
 Part marks were awarded if you selected more correct than incorrect answers. 
