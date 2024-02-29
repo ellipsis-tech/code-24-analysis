@@ -78,7 +78,11 @@ The complexity of `f5` is $O(n^2)$.
 
 ### Q4: In this case for f6, what could f(n) represent such that it is a good measure of the time complexity?
 
-Option D and E only. It is the only line representative of the time complexity. Time Complexity of the function is $O(NK)$, it is the inner for loop that runs $NK$ times.
+Option D and E only. 
+- Option D - Number of times Line 4 runs
+- Option E - Number of times Line 5 runs
+
+It is the only line representative of the time complexity. Time Complexity of the function is $O(NK)$, it is the inner for loop that runs $NK$ times.
 
 Full marks were awarded if:
 - You selected option E only
