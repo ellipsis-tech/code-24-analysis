@@ -8,6 +8,7 @@ $$
 $$
 
 This evaluates to:
+
 $$
 N\sum_{i=0}^{\log_4{N}}4^{-i} 
 = N[\frac{1-0.25^{(\log_{4}{N}+1)}}{1-0.25}] 
