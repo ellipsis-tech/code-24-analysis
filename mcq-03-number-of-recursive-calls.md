@@ -22,4 +22,4 @@ $$
 
 Hence, the answer is `D` for 300 points.
 
-There were a number of participants who did not notice that there will be a maximum of $K$ recursive calls in the $2K$ -ST. We awarded 100 points if you picked option `B` which was $\log_{2K} N$ calls.
+There were a number of participants who did not notice that there will be a maximum of $K$ recursive calls in the $2K$ -ST due to the inefficient implementation of the Pseudocode given in the question. We awarded 100 points if you picked option `B` which was $\log_{2K} N$ calls.
