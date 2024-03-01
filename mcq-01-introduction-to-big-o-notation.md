@@ -54,7 +54,7 @@ Base Cases:
 Let $c = 2$ and $n_0 = 2$. Note that for any $n_0 \geq 2$, $2n^2$ is an upper bound for $T(2) \cdots T(6)$.
 Hence $P(2) \cdots P(6)$ holds.
 
-Suppose that $P(2) \cdots P(k)$ is true for some $P(k) \geq 2n_0$. Show that $P(k) \implies P(k+1)$.
+Suppose that $P(2) \cdots P(k-1)$ is true for some $P(k) \geq 2n_0$. We want to show that $P(k-1) \implies P(k)$.
 
 By the [Strong form of Mathematical Induction](https://math.libretexts.org/Bookshelves/Mathematical_Logic_and_Proof/Gentle_Introduction_to_the_Art_of_Mathematics_(Fields)/05%3A_Proof_Techniques_II_-_Induction/5.04%3A_The_Strong_Form_of_Mathematical_Induction), we can show that 
 
@@ -62,7 +62,7 @@ $P(k+1):$
 
 $\implies T(k+1) = T(k) + T(\frac{k+1}{2}) + O(1)$
 
-$\text{Since } P(k) \text { holds and } P(\frac{k+1}{2}) \text { holds, }$
+$\text{Since } P(k-1) \text { holds and } P(\frac{k}{2}) \text { holds, }$
 
 $T(k+1) \leq c\cdot (k-1)^2 + c \cdot (\frac{k}{2})^2 $
 
