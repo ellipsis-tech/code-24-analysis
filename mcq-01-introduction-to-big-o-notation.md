@@ -31,12 +31,12 @@ So $T(n) = T(n-1) + T(\frac{n}{2}) + \theta(1)$
 When we write the function calls:
 
 - $T(0)$ is the base case, it has 1 call
-- $T(1)$ makes two calls to $T(0)$, it has a total of 3 function calls (including the call to itself). (increased by 2 from $T(0)$)
-- $T(2) = T(1) + T(1)$, it has a total of 3 + 3 + 1 = 7 calls (increased by 4 from  $T(1)$ )
-- $T(3) = T(2) + T(1)$, it has a total of 7 + 3 + 1 = 11 calls (increased by 4 from $T(2)$ )
-- $T(4) = T(3) + T(2)$, it has a total of 11 + 7 + 1 = 19 calls (increased by 8 from $T(3)$ )
-- $T(5) = T(4) + T(2)$, it has a total of 19 + 7 + 1 = 27 calls (increased by 8 from $T(4)$ )
-- $T(6) = T(5) + T(3)$, it has a total of 27 + 11 + 1 = 39 calls (increased by 12 from $T(5)$ )
+- $T(1)$ makes 1 calls to $T(0)$, it has a 2 function calls (increased by 1 from $T(0)$ )
+- $T(2) = T(1) + T(1)$, it has a total of 2 + 2 + 1 = 5 calls (increased by 4 from $T(1)$ )
+- $T(3) = T(2)$, it has a total of 5 + 1 = 6 calls (increased by 1 from $T(2)$ )
+- $T(4) = T(3) + T(2)$, it has a total of 6 + 5 + 1 = 12 calls (increased by 5 from $T(3)$ )
+- $T(5) = T(4)$, it has a total of 12 + 1 = 13 calls (increased by 1 from $T(4)$ )
+- $T(6) = T(5) + T(3)$, it has a total of 13 + 6 + 1 = 20 calls (increased by 7 from $T(5)$ )
 
 and so on.
 
@@ -45,36 +45,6 @@ We can see that this is **not** a linear growth trend. Hence, we cannot say that
 $O(2^n)$ is incorrect as the number of recursive calls does not double each time we increase $n$ by 1.
 
 Hence, the logical conclusion is that `f4` is bounded by $O(n^2)$, where $n$ is the input value of $n$.
-
-For a more formal proof, refer below:
-
-We define a predicate $P(n): T(n) \text { is } O(n^2)$. This means that there exists some constants $c$ and $n_0$ such that $c\cdot n^2$ is bounded by $n$ for all $n\geq n_0$. If $n_0$ is large, we can assume that $n$ is also larger than $n_0$.
-
-Base Cases:
-Let $c = 2$ and $n_0 = 2$. Note that for any $n_0 \geq 2$, $2n^2$ is an upper bound for $T(2) \cdots T(6)$.
-Hence $P(2) \cdots P(6)$ holds.
-
-Suppose that $P(2) \cdots P(k-1)$ is true for some $P(k) \geq 2n_0$. We want to show that $P(k-1) \implies P(k)$.
-
-By the [Strong form of Mathematical Induction](https://math.libretexts.org/Bookshelves/Mathematical_Logic_and_Proof/Gentle_Introduction_to_the_Art_of_Mathematics_(Fields)/05%3A_Proof_Techniques_II_-_Induction/5.04%3A_The_Strong_Form_of_Mathematical_Induction), we can show that 
-
-$P(k):$
-
-$\implies T(k) = T(k-1) + T(\frac{k}{2}) + O(1)$
-
-$\text{Since } P(k-1) \text { holds and } P(\frac{k}{2}) \text { holds, }$
-
-$T(k+1) \leq c\cdot (k-1)^2 + c \cdot (\frac{k}{2})^2 $
-
-$\leq c[k^2 + \frac{k^2}{4} ] $
-
-$= c[\frac{5}{4}k^2] $
-
-$\leq c(k+1)^2 \text { for } k \geq 2n_0 $
-
-Hence, $P(k+1)$ holds.
-
-The complexity of `f5` is $O(n^2)$.
 
 ### Q4: In this case for f6, what could f(n) represent such that it is a good measure of the time complexity?
 
