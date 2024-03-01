@@ -58,9 +58,9 @@ Suppose that $P(2) \cdots P(k-1)$ is true for some $P(k) \geq 2n_0$. We want to 
 
 By the [Strong form of Mathematical Induction](https://math.libretexts.org/Bookshelves/Mathematical_Logic_and_Proof/Gentle_Introduction_to_the_Art_of_Mathematics_(Fields)/05%3A_Proof_Techniques_II_-_Induction/5.04%3A_The_Strong_Form_of_Mathematical_Induction), we can show that 
 
-$P(k+1):$
+$P(k):$
 
-$\implies T(k+1) = T(k) + T(\frac{k+1}{2}) + O(1)$
+$\implies T(k) = T(k-1) + T(\frac{k}{2}) + O(1)$
 
 $\text{Since } P(k-1) \text { holds and } P(\frac{k}{2}) \text { holds, }$
 
